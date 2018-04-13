@@ -1,20 +1,12 @@
-class Test:
-	def sum(self,a,b):
-		for i in range(len(a)):
-			for j in range(1,len(a)):
-				if a[j]==b-a[i]:
-					print([i,j])
-			
-			
-
-
-					
-					
-					
-					
-				
-			
-			
-
-c=Test()
-c.sum([3,2,4],6)
+class Solution:
+    def twoSum(self, nums, target):
+       d={}
+       for i,n in enumerate(nums):
+            g=target-n
+            if g in d:
+                return[d[g],i]
+            else:
+                d[n]=i
+                
+c=Solution()
+c.twoSum([2,7,11,15],9)
